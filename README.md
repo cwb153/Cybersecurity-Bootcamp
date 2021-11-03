@@ -53,10 +53,10 @@ A summary of the access policies in place can be found in the table below.
 |   Name   |      Publicly Accessible     | Allowed IP Addresses      |
 |:--------:|:----------------------------:|:-------------------------:|
 | Jump-Box | Yes    | 98.147.135.10   |
-| Web-1       | No | 10.0.0.9  |
-| Web-2       | No | 10.0.0.9 |
-| Web-3       | No | 10.0.0.9 |
-| Elk-1         | No  | 10.0.0.9 |
+| Web-1       | No | 10.0.0.9, 98.147.135.10  |
+| Web-2       | No | 10.0.0.9, 98.147.135.10 |
+| Web-3       | No | 10.0.0.9, 98.147.135.10 |
+| Elk-1         | No  | 10.0.0.9, 98.147.135.10 |
 
 
 

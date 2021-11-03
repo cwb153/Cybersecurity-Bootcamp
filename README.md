@@ -2,7 +2,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-https://github.com/cwb153/Cybersecurity-Bootcamp/blob/f4d8342f2b2f16c8f83fac036f70c92c1ea847e1/Diagrams/AzureNetworkDiagram.png
+https://github.com/cwb153/Cybersecurity-Bootcamp/blob/213c8847f423c6c3c863f3fc68f459845fd84473/Diagrams/ELK%20Stack%20Project%20Diagram.png
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the main-yml.md file may be used to install only certain pieces of it, such as Filebeat.
 

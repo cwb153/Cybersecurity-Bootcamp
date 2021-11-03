@@ -95,8 +95,8 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the either the main-yml.md file or the Install-Elk-Ansible.md file to the etc/ansible directory.
-- My original ELK server was created with the Install-Elk-Ansible.md playbook, however, after reviewing the concept of roles in Ansible, I created the main-yml.md playbook which allows for easy completion of specific tasks.
+- Copy the either the main.yml file (for a roles based installation) or the Install-Elk.yml file to the etc/ansible directory.
+- My original ELK server was created with the Install-Elk.yml playbook, however, after reviewing the concept of roles in Ansible, I created the main.yml playbook which allows for easy completion of specific tasks.
 - Update the hosts file to include the webservers IP addresses and the elk IP address. When creating the playbook, I specified either webservers or elk to assign certain tasks, such as install filebeat or metricbeat.
 - Run the playbook, and navigate to 20.112.111.160:5601/app/kibana to check that the installation worked as expected.
 

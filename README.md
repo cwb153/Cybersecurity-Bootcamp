@@ -6,7 +6,7 @@ https://github.com/cwb153/Cybersecurity-Bootcamp/blob/f4d8342f2b2f16c8f83fac036f
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the main-yml.md file may be used to install only certain pieces of it, such as Filebeat.
 
-https://github.com/cwb153/Cybersecurity-Bootcamp/blob/5be4c1a16758e7e53ba3f7dbbddb80a63a742173/Ansible/main-yml.md
+https://github.com/cwb153/Cybersecurity-Bootcamp/blob/4760ef5de9fe41b98e0dc506b8bcaad134391605/Ansible/main.yml
 
 This document contains the following details:
 - Description of the Topology

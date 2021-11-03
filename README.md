@@ -2,11 +2,11 @@
 
 The files in this repository were used to configure the network depicted below.
 
-Diagrams/AzureNetworkDiagram.png
+https://github.com/cwb153/Cybersecurity-Bootcamp/blob/f4d8342f2b2f16c8f83fac036f70c92c1ea847e1/Diagrams/AzureNetworkDiagram.png
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the main.yml file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the main-yml.md file may be used to install only certain pieces of it, such as Filebeat.
 
-https://github.com/cwb153/ELK-Stack-Project/blob/41d2a1ea261fb614e1c00f150336d570f6a01350/main.yml.docx
+https://github.com/cwb153/Cybersecurity-Bootcamp/blob/4760ef5de9fe41b98e0dc506b8bcaad134391605/Ansible/main.yml
 
 This document contains the following details:
 - Description of the Topology
@@ -50,13 +50,13 @@ Machines within the network can only be accessed by the Jump-Box with an IP addr
 
 A summary of the access policies in place can be found in the table below.
 
-|   Name   |      Publicly Accessible     | Allowed IP Addresses
-|:--------:|:-----------------:|:----------:|:-----------------------------:|
-| Jump-Box | No    | 98.147.135.10   |
-| Web-1       | No | 10.0.0.9, 98.147.135.10  |
-| Web-2       | No | 10.0.0.9, 98.147.135.10 |
-| Web-3       | No | 10.0.0.9, 98.147.135.10 |
-| Elk-1         | No  | 10.0.0.9, 98.147.135.10 |
+|   Name   |      Publicly Accessible     | Allowed IP Addresses      |
+|:--------:|:----------------------------:|:-------------------------:|
+| Jump-Box | Yes    | 98.147.135.10   |
+| Web-1       | No | 10.0.0.9  |
+| Web-2       | No | 10.0.0.9 |
+| Web-3       | No | 10.0.0.9 |
+| Elk-1         | No  | 10.0.0.9 |
 
 
 
@@ -75,7 +75,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-https://github.com/cwb153/ELK-Stack-Project/blob/605040b459b047ac4662381039151f08a0ffdb9d/Docker%20ps.png
+https://github.com/cwb153/Cybersecurity-Bootcamp/blob/8fe3bb8693e2a4582748ff835c170c7cb91d3074/Ansible/Images/Docker%20ps.png
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -95,10 +95,16 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the main.yml file to the etc/ansible directory.
-- Update the hosts file to include the webservers IP addresses and the elk IP address. When creating a playbook, I specified    either webservers or elk to assign certain tasks, such as install filebeat or metricbeat.
+- Copy the either the main-yml.md file or the Install-Elk-Ansible.md file to the etc/ansible directory.
+- My original ELK server was created with the Install-Elk-Ansible.md playbook, however, after reviewing the concept of roles in Ansible, I created the main-yml.md playbook which allows for easy completion of specific tasks.
+- Update the hosts file to include the webservers IP addresses and the elk IP address. When creating the playbook, I specified either webservers or elk to assign certain tasks, such as install filebeat or metricbeat.
 - Run the playbook, and navigate to 20.112.111.160:5601/app/kibana to check that the installation worked as expected.
 
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+FOR EXAMPLE:
+To configure the ELK stack - 
+1) Download the Install-Elk.yml file from my repository and move it to the /etc/ansible directory of your already provisioned Ansible container.
+2) Update your etc/ansible/hosts file using "nano hosts" to include the name and IP address of your ELK stack, in my case, I created [elk] and listed the IP address of 10.1.0.4.
+3) Update your etc/ansible/ansible.cfg using "nano ansible.cfg". Scroll to remote_user and replace the user name with the user name created for the systems. In my case, I updated the remote_user to azadmin.
+4) Use the command "ansible-playbook Install-Elk.yml" to launch the playbook and create the ELK stack.
 
